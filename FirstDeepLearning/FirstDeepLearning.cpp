@@ -1,5 +1,8 @@
 ﻿#include <iostream>
 
+#include "ChainRule.h"
+#include "GradientDescent.h"
+
 #define MAX2(a, b) (a) > (b) ? (a) : (b)
 
 class Neuron
@@ -61,14 +64,14 @@ int main()
 {
     Neuron my_neuron(2.0, 1.0);
 
-    std::cout << "example 1" << std::endl;
+    std::cout << "example 1: feed forward" << std::endl;
     std::cout << "Input = 0.0 " << my_neuron.feedForward(0.0) << std::endl;
     std::cout << "Input = 1.0 " << my_neuron.feedForward(1.0) << std::endl;
     std::cout << "Input = 2.0 " << my_neuron.feedForward(2.0) << std::endl;
     std::cout << "Input = 3.0 " << my_neuron.feedForward(3.0) << std::endl;
     std::cout << std::endl;;
 
-    std::cout << "example 2" << std::endl;
+    std::cout << "example 2: back propagation" << std::endl;
     for (int r = 0; r < 10; ++r)
     {
         std::cout << "Training " << r << std::endl;
@@ -78,4 +81,14 @@ int main()
 
         std::cout << "w = " << my_neuron.w_ << " b = " << my_neuron.b_ << std::endl;
     }
+    std::cout << std::endl;;
+
+    std::cout << "example 3: Gradient Descent" << std::endl;
+    GradientDescent gradient_descent;
+    gradient_descent();
+    std::cout << std::endl;;
+
+    std::cout << "example 4: Chain Rule" << std::endl;
+    ChainRule chain_rule;
+    chain_rule();
 }

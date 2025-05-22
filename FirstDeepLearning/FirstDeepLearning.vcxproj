@@ -127,7 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ChainRule.cpp" />
     <ClCompile Include="FirstDeepLearning.cpp" />
+    <ClCompile Include="GradientDescent.cpp" />
+    <ClCompile Include="MyFunction.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ChainRule.h" />
+    <ClInclude Include="GradientDescent.h" />
+    <ClInclude Include="MyFunction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
